@@ -7,15 +7,6 @@
 </head>
 <body>
     <script>
-        // DECLARE playser's score variables
-        let humanScore = 0;
-        let computerScore = 0;
-
-        // PRINT computer choice
-        console.log(`Computer choice: ${getComputerChoice()}`);
-        // PRINT user choice
-        console.log(`User's choice: ${getHumanChoice()}`);
-
         // CREATE the getComputerChoice functions that will randomly return "rock", "paper" or "scissors".
         function getComputerChoice() {
             // the ComputerChoice variable will contain numbers like 0, 1, 2
@@ -47,6 +38,19 @@
             // INCREMENTS the round winner's score;
             // logs winner announcement.
         }
+
+        // DECLARE playser's score variables
+        let humanScore = 0;
+        let computerScore = 0;
+
+        // DECLARE choice's variables
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+
+        // PRINT computer choice
+        console.log(`Computer choice: ${getComputerChoice()}`);
+        // PRINT user choice
+        console.log(`User's choice: ${getHumanChoice()}`);
     </script>
 </body>
 </html>
