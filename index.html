@@ -36,7 +36,7 @@
         function playRound(computerChoice, humanChoice) {
             // MAKE human case insensitive
             humanChoice = humanChoice.toLowerCase();
-            
+
             // plays a single round;
             // IF user choses rock
             if (humanChoice === "rock") {
@@ -52,17 +52,44 @@
                 }
                 // ELSE print "Pair! You both chosed Rock!"
                 else {
-                    console.log("Pair! You both chosed Rock!")
+                    console.log("Pair! You both chosed Rock!");
+                }
+            }         
+            // ELSE IF user choses paper
+            else if (humanChoice === "paper") {
+                // IF computer choses scissors print "You lose! Scissors beats Paper"
+                if (computerChoice === "scissors") {
+                    console.log("You lose! Scissors beats Paper");
+                    computerScore++;
+                }
+                // ELSE IF computer choses rock print "You win! Paper beats Rock"
+                else if (computerChoice === "rock") {
+                    console.log("You win! Paper beats Rock");
+                    humanScore++;
+                }
+                // ELSE print "Pair! You both chosed Paper"
+                else {
+                    console.log("Pair! You both chosed Paper");
                 }
             }
-                
-            // ELSE IF user choses paper
-                // IF computer choses scissors print "You lose!" Scissors beats Paper"
-                // ELSE IF computer choses rock print "You win! Paper beats Rock"
-                // ELSE print "Pair! You both chosed Paper"
             // ELSE (user scissors)
-                // IF computer choses rock print "You lose! Rock beats Scissors"
-                // ELSE IF computer choses paper print "You win!" Scissors beats Paper"
+            else {
+                 // IF computer choses rock print "You lose! Rock beats Scissors"
+                 if (computerChoice === "rock") {
+                    console.log("You lose! Rock beats Scissors");
+                    computerScore++;
+                 }
+                // ELSE IF computer choses paper print "You win! Scissors beats Paper"
+                else if (computerChoice === "paper") {
+                    console.log("You win! Scissors beats Paper");
+                    humanScore++;
+                }
+                // ELSE print "Pair! You both chosed Scissors"
+                else {
+                    console.log("Pair! You both chosed Scissors");
+                }
+            }
+               
             // PRINT the round winner
             // INCREMENTS the round winner's score;
 
@@ -84,6 +111,9 @@
 
         // CALL playRound function
         playRound(computerSelection, humanSelection);
+
+        console.log(humanScore);
+        console.log(computerScore);
     </script>
 </body>
 </html>
