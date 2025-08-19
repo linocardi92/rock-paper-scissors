@@ -15,7 +15,7 @@
         function getComputerChoice(computerChoice) {
             // the ComputerChoice variable will contain numbers like 0, 1, 2
             // randomly ASSIGN one of the three numbers to the variable 
-            computerChoice = Math.random();
+            computerChoice = Math.floor(Math.random() * 3);
             // return it
             return computerChoice;
         }
