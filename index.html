@@ -7,15 +7,23 @@
 </head>
 <body>
     <script>
-        // CREATE computer variable
-        const computerChoice = 0;
         // CHECK random operation output
-        console.log(getComputerChoice(computerChoice));
+        console.log(getComputerChoice());
+        
         // CREATE the getComputerChoice functions that will randomly return "rock", "paper" or "scissors".
-        function getComputerChoice(computerChoice) {
+        function getComputerChoice() {
             // the ComputerChoice variable will contain numbers like 0, 1, 2
+            let number = 0;
             // randomly ASSIGN one of the three numbers to the variable 
-            computerChoice = Math.floor(Math.random() * 3);
+            number = Math.floor(Math.random() * 3);
+            // CHOOSE returning string
+            if (number === 0) {
+                computerChoice = "rock";
+            } else if (number === 1) {
+                computerChoice = "paper";
+            } else {
+                computerChoice = "scissors";
+            }
             // return it
             return computerChoice;
         }
