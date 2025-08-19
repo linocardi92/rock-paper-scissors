@@ -8,7 +8,7 @@
 <body>
     <script>
         // CHECK random operation output
-        console.log(getComputerChoice());
+        console.log(`Computer choice: ${getComputerChoice()}`);
 
         // CREATE the getComputerChoice functions that will randomly return "rock", "paper" or "scissors".
         function getComputerChoice() {
@@ -28,8 +28,11 @@
             return computerChoice;
         }
         // CREATE the getHumanChoice functions that will check the three words according to the user input.
-        function getHumanChoice(userInput) {
+        function getHumanChoice() {
             // ASK the user his choice
+            const userInput = prompt("Rock, paper or scissors? ");
+            // return it
+            return userInput;
         } 
     </script>
 </body>
