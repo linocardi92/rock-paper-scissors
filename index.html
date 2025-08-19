@@ -32,70 +32,70 @@
             return userInput;
         } 
 
-        // CREATE a function playRound that takes choises as arguments;
-        function playRound(computerChoice, humanChoice, computerScore, humanScore) {
-            // MAKE human case insensitive
-            humanChoice = humanChoice.toLowerCase();
-
-            // plays a single round;
-            // IF user choses rock
-            if (humanChoice === "rock") {
-                // IF computer choses paper print "You lose! Paper beats Rock"
-                if (computerChoice === "paper") {
-                    console.log("You lose! Paper beats Rock");
-                    return computerScore++;
-                } 
-                // ELSE IF computer choses scissors print "You win! Rock beats Scissors"
-                else if (computerChoice === "scissors") {
-                    console.log("You win! Rock beats Scissors");
-                    return humanScore++;
-                }
-                // ELSE print "Pair! You both chosed Rock!"
-                else {
-                    console.log("Pair! You both chosed Rock!");
-                }
-            }         
-            // ELSE IF user choses paper
-            else if (humanChoice === "paper") {
-                // IF computer choses scissors print "You lose! Scissors beats Paper"
-                if (computerChoice === "scissors") {
-                    console.log("You lose! Scissors beats Paper");
-                    return computerScore++;
-                }
-                // ELSE IF computer choses rock print "You win! Paper beats Rock"
-                else if (computerChoice === "rock") {
-                    console.log("You win! Paper beats Rock");
-                    return humanScore++;
-                }
-                // ELSE print "Pair! You both chosed Paper"
-                else {
-                    console.log("Pair! You both chosed Paper");
-                }
-            }
-            // ELSE (user scissors)
-            else {
-                 // IF computer choses rock print "You lose! Rock beats Scissors"
-                 if (computerChoice === "rock") {
-                    console.log("You lose! Rock beats Scissors");
-                    return computerScore++;
-                 }
-                // ELSE IF computer choses paper print "You win! Scissors beats Paper"
-                else if (computerChoice === "paper") {
-                    console.log("You win! Scissors beats Paper");
-                    return humanScore++;
-                }
-                // ELSE print "Pair! You both chosed Scissors"
-                else {
-                    console.log("Pair! You both chosed Scissors");
-                }
-            }
-        }
-
         // CREATE the playGame function that will call playRound 5 times
         function playGame() {
-            // DECLARE playser's score variables
+            // DECLARE player's score variables
             let humanScore = 0;
             let computerScore = 0;
+
+            // CREATE a function playRound that takes choises as arguments;
+            function playRound(computerChoice, humanChoice, computerScore, humanScore) {
+                // MAKE human case insensitive
+                humanChoice = humanChoice.toLowerCase();
+
+                // plays a single round;
+                // IF user choses rock
+                if (humanChoice === "rock") {
+                    // IF computer choses paper print "You lose! Paper beats Rock"
+                    if (computerChoice === "paper") {
+                        console.log("You lose! Paper beats Rock");
+                        return computerScore++;
+                    } 
+                    // ELSE IF computer choses scissors print "You win! Rock beats Scissors"
+                    else if (computerChoice === "scissors") {
+                        console.log("You win! Rock beats Scissors");
+                        return humanScore++;
+                    }
+                    // ELSE print "Pair! You both chosed Rock!"
+                    else {
+                        console.log("Pair! You both chosed Rock!");
+                    }
+                }         
+                // ELSE IF user choses paper
+                else if (humanChoice === "paper") {
+                    // IF computer choses scissors print "You lose! Scissors beats Paper"
+                    if (computerChoice === "scissors") {
+                        console.log("You lose! Scissors beats Paper");
+                        return computerScore++;
+                    }
+                    // ELSE IF computer choses rock print "You win! Paper beats Rock"
+                    else if (computerChoice === "rock") {
+                        console.log("You win! Paper beats Rock");
+                        return humanScore++;
+                    }
+                    // ELSE print "Pair! You both chosed Paper"
+                    else {
+                        console.log("Pair! You both chosed Paper");
+                    }
+                }
+                // ELSE (user scissors)
+                else {
+                    // IF computer choses rock print "You lose! Rock beats Scissors"
+                    if (computerChoice === "rock") {
+                        console.log("You lose! Rock beats Scissors");
+                        return computerScore++;
+                    }
+                    // ELSE IF computer choses paper print "You win! Scissors beats Paper"
+                    else if (computerChoice === "paper") {
+                        console.log("You win! Scissors beats Paper");
+                        return humanScore++;
+                    }
+                    // ELSE print "Pair! You both chosed Scissors"
+                    else {
+                        console.log("Pair! You both chosed Scissors");
+                    }
+                }
+            }
 
             // CALL playRound function
             playRound(computerSelection, humanSelection, humanScore, computerScore);
