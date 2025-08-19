@@ -7,10 +7,18 @@
 </head>
 <body>
     <script>
+        // CREATE computer variable
+        const computerChoice = 0;
+        // CHECK random operation output
+        console.log(getComputerChoice(computerChoice));
         // CREATE the getComputerChoice functions that will randomly return "rock", "paper" or "scissors".
+        function getComputerChoice(computerChoice) {
             // the ComputerChoice variable will contain numbers like 0, 1, 2
             // randomly ASSIGN one of the three numbers to the variable 
+            computerChoice = Math.random();
             // return it
+            return computerChoice;
+        }
         // CREATE the getHumanChoice functions that will check the three words according to the user input.
     </script>
 </body>
