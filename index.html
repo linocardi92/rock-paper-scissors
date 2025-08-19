@@ -34,6 +34,8 @@
 
         // CREATE a function playRound that takes choises as arguments;
         function playRound(computerChoice, humanChoice) {
+            // MAKE human case insensitive
+            humanChoice = humanChoice.toLowerCase();
             // plays a single round;
             // INCREMENTS the round winner's score;
             // logs winner announcement.
@@ -51,6 +53,9 @@
         console.log(`Computer choice: ${computerSelection}`);
         // PRINT user choice
         console.log(`User's choice: ${humanSelection}`);
+
+        // CALL playRound function
+        playRound(computerSelection, humanSelection);
     </script>
 </body>
 </html>
