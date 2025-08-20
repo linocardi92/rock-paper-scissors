@@ -122,7 +122,14 @@
 
                 console.log(humanScore);
                 console.log(computerScore);
-            }   
+            } 
+            
+            // PRINT the winner
+            if (humanScore > computerScore) {
+                console.log("HUMAN WINS!");
+            } else if (humanScore < computerScore) {
+                console.log("COMPUTER WINS!");
+            } else console.log("PAIR!");
         }
 
         playGame();
