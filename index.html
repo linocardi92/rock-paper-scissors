@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+
         // CREATE the getComputerChoice functions that will randomly return "rock", "paper" or "scissors".
         function getComputerChoice() {
             // the ComputerChoice variable will contain numbers like 0, 1, 2
@@ -24,6 +25,7 @@
             // return it
             return computerChoice;
         }
+
         // CREATE the getHumanChoice functions that will check the three words according to the user input.
         function getHumanChoice() {
             // ASK the user his choice
@@ -34,12 +36,9 @@
 
         // CREATE the playGame function that will call playRound 5 times
         function playGame() {
-            // DECLARE player's score variables
-            let humanScore = 0;
-            let computerScore = 0;
 
             // CREATE a function playRound that takes choises as arguments;
-            function playRound(computerChoice, humanChoice, computerScore, humanScore) {
+            function playRound(computerChoice, humanChoice) {
                 // MAKE human case insensitive
                 humanChoice = humanChoice.toLowerCase();
 
@@ -79,7 +78,7 @@
                     }
                 }
                 // ELSE (user scissors)
-                else {
+                else if (humanChoice === "scissors"){
                     // IF computer choses rock print "You lose! Rock beats Scissors"
                     if (computerChoice === "rock") {
                         console.log("You lose! Rock beats Scissors");
@@ -95,12 +94,19 @@
                         console.log("Pair! You both chosed Scissors");
                     }
                 }
+                // ELSE return "Unknown choice"
+                else {
+                    console.log("Unknown choice!");
+                }
             }
 
-            // CALL playRound function
-            playRound(computerSelection, humanSelection, humanScore, computerScore);
+            // DECLARE playser's score variables
+            let humanScore = 0;
+            let computerScore = 0;
 
-            // PRINT current score
+            // CALL playRound function
+            playRound(computerSelection, humanSelection);
+
             console.log(humanScore);
             console.log(computerScore);
         }
