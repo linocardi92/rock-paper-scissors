@@ -100,25 +100,25 @@
                 }
             }
 
+            // DECLARE choice's variables
+            const humanSelection = getHumanChoice();
+            const computerSelection = getComputerChoice();
+
+            // PRINT computer choice
+            console.log(`Computer choice: ${computerSelection}`);
+            // PRINT user choice
+            console.log(`User's choice: ${humanSelection}`);
+
             // DECLARE playser's score variables
             let humanScore = 0;
             let computerScore = 0;
 
-            // CALL playRound function
+            // CALL playRound function 5 times
             playRound(computerSelection, humanSelection);
 
             console.log(humanScore);
             console.log(computerScore);
         }
-
-        // DECLARE choice's variables
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-
-        // PRINT computer choice
-        console.log(`Computer choice: ${computerSelection}`);
-        // PRINT user choice
-        console.log(`User's choice: ${humanSelection}`);
 
         playGame();
     </script>
